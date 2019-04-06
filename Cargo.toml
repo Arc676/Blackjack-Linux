@@ -1,0 +1,14 @@
+[package]
+name = "blackjack"
+version = "0.1.0"
+authors = ["Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com"]
+edition = "2018"
+build = "src/build.rs"
+
+[dependencies]
+qmetaobject = "0.0.5"
+cstr = "0.1.0"
+cpp = "0.4"
+
+[build-dependencies]
+cpp_build = "0.4"
