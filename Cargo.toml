@@ -1,5 +1,5 @@
 [package]
-name = "blackjack"
+name = "blackjack-linux"
 version = "0.1.0"
 authors = ["Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com"]
 edition = "2018"
@@ -9,6 +9,7 @@ build = "src/build.rs"
 qmetaobject = "0.0.5"
 cstr = "0.1.0"
 cpp = "0.4"
+blackjack = "0.1.0"
 
 [build-dependencies]
 cpp_build = "0.4"
