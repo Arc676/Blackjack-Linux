@@ -1,4 +1,4 @@
-// Copyright (C) 2018-9 Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>
+// Copyright (C) 2019 Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -13,35 +13,31 @@
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 import QtQuick 2.4
-import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
+import Ubuntu.Components.Popups 1.3
 
-MainView {
-	id: root
-	objectName: 'mainView'
-	applicationName: 'blackjack.arc676'
-	automaticOrientation: true
+Dialog {
+	id: dialog
+	objectName: "confirmRestartDialog"
 
-	width: units.gu(45)
-	height: units.gu(75)
-	property real margin: units.gu(2)
+	signal restart()
 
-	PageStack {
-		id: pageViewer
-		anchors.fill: parent
+	text: i18n.tr("Are you sure you want to restart the game?")
 
-		property SetupView setupPage: SetupView {
-			visible: false
+	Button {
+		id: confirm
+		text: i18n.tr("Yes, restart")
+		onClicked: {
+			dialog.restart()
+			PopupUtils.close(dialog)
 		}
+	}
 
-		property GameView gamePage: GameView {
-			setup: pageViewer.setupPage
-			visible: false
-		}
-
-		Component.onCompleted: {
-			pageViewer.clear()
-			pageViewer.push(gamePage)
+	Button {
+		id: cancel
+		text: i18n.tr("No, keep playing")
+		onClicked: {
+			PopupUtils.close(dialog)
 		}
 	}
 }
