@@ -16,32 +16,5 @@ import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
 
-MainView {
-	id: root
-	objectName: 'mainView'
-	applicationName: 'blackjack.arc676'
-	automaticOrientation: true
-
-	width: units.gu(45)
-	height: units.gu(75)
-	property real margin: units.gu(2)
-
-	PageStack {
-		id: pageViewer
-		anchors.fill: parent
-
-		property SetupView setupPage: SetupView {
-			visible: false
-		}
-
-		property GameView gamePage: GameView {
-			setup: pageViewer.setupPage
-			visible: false
-		}
-
-		Component.onCompleted: {
-			pageViewer.clear()
-			pageViewer.push(gamePage)
-		}
-	}
+Rectangle {
 }

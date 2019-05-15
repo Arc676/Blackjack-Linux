@@ -32,6 +32,7 @@ PageHeader {
 				iconName: "reset"
 				visible: pageViewer.depth === 1
 				text: i18n.tr("Restart game")
+				onTriggered: pageViewer.gamePage.restartGame()
 			},
 			Action {
 				iconName: "info"
