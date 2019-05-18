@@ -29,9 +29,10 @@ fn main() {
     let qt_include_path = qmake_query("QT_INSTALL_HEADERS");
     let qt_library_path = qmake_query("QT_INSTALL_LIBS");
 
-    cpp_build::Config::new()
-        .include(qt_include_path.trim())
-        .build("src/main.rs");
+    let mut build = cpp_build::Config::new()
+        .include(qt_include_path.trim());
+    build.build("src/main.rs");
+    build.build("src/wrappers.rs");
 
     let macos_lib_search = if cfg!(target_os = "macos") {
         "=framework"

@@ -17,4 +17,11 @@ import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
 
 Rectangle {
+	Canvas {
+		id: handCanvas
+		anchors.fill: parent
+		onPaint: {
+			var ctx = handCanvas.getContext('2d')
+		}
+	}
 }

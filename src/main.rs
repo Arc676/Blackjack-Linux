@@ -130,6 +130,9 @@ fn main() {
 	QQuickStyle::set_style("Suru");
 	qrc::load();
 	qml_register_type::<BlackjackBackend>(cstr!("BlackjackBackend"), 1, 0, cstr!("BlackjackBackend"));
+	qml_register_type::<PlayerWrapper>(cstr!("PlayerWrapper"), 1, 0, cstr!("PlayerWrapper"));
+	qml_register_type::<HandWrapper>(cstr!("HandWrapper"), 1, 0, cstr!("HandWrapper"));
+	qml_register_type::<CardWrapper>(cstr!("CardWrapper"), 1, 0, cstr!("CardWrapper"));
 	let mut engine = QmlEngine::new();
 	engine.load_file("qrc:/qml/Main.qml".into());
 	engine.exec();
