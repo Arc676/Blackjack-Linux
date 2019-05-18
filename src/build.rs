@@ -29,8 +29,8 @@ fn main() {
     let qt_include_path = qmake_query("QT_INSTALL_HEADERS");
     let qt_library_path = qmake_query("QT_INSTALL_LIBS");
 
-    let mut build = cpp_build::Config::new()
-        .include(qt_include_path.trim());
+    let mut build = cpp_build::Config::new();
+    build.include(qt_include_path.trim());
     build.build("src/main.rs");
     build.build("src/wrappers.rs");
 

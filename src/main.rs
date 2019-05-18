@@ -89,7 +89,7 @@ struct BlackjackBackend {
 	}),
 
 	player_is_playing: qt_method!(fn player_is_playing(&self) -> bool {
-		self.players[self.currentPlayer.is_playing()
+		self.players[self.currentPlayer].is_playing()
 	}),
 
 	player_hit: qt_method!(fn player_hit(&self) {

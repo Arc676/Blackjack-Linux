@@ -64,5 +64,17 @@ struct CardWrapper {
 
 	to_u32: qt_method!(fn to_u32(&self) -> u32 {
 		self.card.to_u32()
-	})
+	}),
+
+    to_image_name: qt_method!(fn to_image_name(&self) -> CString {
+        let card = self.to_u32();
+        let suit = match card & SUIT {
+            DIAMONDS => "d",
+            HEARTS => "h",
+            CLUBS => "c",
+            SPADES => "s"
+        };
+        let code = format!("{}{:02}.png", suit, card & VALUE);
+        cstr!(code)
+    })
 }
