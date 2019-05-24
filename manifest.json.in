@@ -1,7 +1,7 @@
 {
     "name": "blackjack.arc676",
-    "description": "A Linux frontend for the popular card game Blackjack",
-    "architecture": "armhf",
+    "description": "Ubuntu Touch frontend to the popular casino game",
+    "architecture": "@CLICK_ARCH@",
     "title": "Blackjack",
     "hooks": {
         "blackjack": {

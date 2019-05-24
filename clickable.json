@@ -1,5 +1,4 @@
 {
-  "template": "rust",
-  "kill": "blackjack-linux"
+  "template": "cmake",
+  "kill": "qmlscene"
 }
-
