@@ -38,7 +38,7 @@ PageHeader {
 				iconName: "info"
 				visible: pageViewer.depth === 1
 				text: i18n.tr("About Blackjack")
-			},
+			}
 		]
 	}
 }

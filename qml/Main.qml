@@ -14,13 +14,15 @@
 
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
+import QtQuick.Controls 2.0
 import Ubuntu.Components 1.3
 
-MainView {
-	id: root
-	objectName: 'mainView'
-	applicationName: 'blackjack.arc676'
-	automaticOrientation: true
+ApplicationWindow {
+	id: window
+
+	Component.onCompleted: {
+		show()
+	}
 
 	width: units.gu(45)
 	height: units.gu(75)
