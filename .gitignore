@@ -1,10 +1,4 @@
-# Rust
-/target
-**/*.rs.bk
-Cargo.lock
-
-# Clickable
-.clickable/
-build/
-
+build
 *.ignore
+*.click
+.*

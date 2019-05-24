@@ -52,6 +52,7 @@ Page {
 	}
 
 	Column {
+		spacing: margin
 		anchors {
 			top: header.bottom
 			topMargin: margin
@@ -63,43 +64,14 @@ Page {
 			bottomMargin: margin
 		}
 
-		ListView {
-			id: playerTable
-			width: parent.width
-			//model: StandingsModel {}
-			delegate: Rectangle {
-				width: parent.width
-				height: pName.height
-
-				Text {
-					id: pName
-					text: playerName
-					anchors.left: parent.left
-					anchors.leftMargin: margin
-				}
-
-				Text {
-					id: pBal
-					text: playerBalance
-					anchors.left: parent.left
-					anchors.leftMargin: units.gu(20)
-				}
-
-				Text {
-					id: pStanding
-					text: playerStanding
-					anchors.right: parent.right
-					anchors.rightMargin: margin
-				}
-			}
-		}
-
 		Label {
 			id: playerLbl
 			text: "Player: (none)"
 		}
 
 		Row {
+			spacing: margin
+
 			Label {
 				text: "Wager:"
 			}
@@ -126,34 +98,74 @@ Page {
 		}
 
 		Row {
+			spacing: margin
+
 			Button {
 				id: hitButton
+				text: i18n.tr("Hit")
 				onClicked: BlackjackBackend.player_hit()
 			}
 
 			Button {
 				id: standButton
+				text: i18n.tr("Stand")
 				onClicked: BlackjackBackend.player_stand()
 			}
 
 			Button {
 				id: doubleButton
+				text: i18n.tr("Double")
 				onClicked: BlackjackBackend.player_double()
 			}
 
 			Button {
 				id: splitButton
+				text: i18n.tr("Split")
 				onClicked: BlackjackBackend.player_split()
 			}
 
 			Button {
 				id: surrenderButton
+				text: i18n.tr("Surrender")
 				onClicked: BlackjackBackend.player_surrender()
 			}
 
 			Button {
 				id: nextButton
+				text: i18n.tr("Next")
 				onClicked: BlackjackBackend.pass_turn()
+			}
+		}
+
+		ListView {
+			id: playerTable
+			width: parent.width
+			height: units.gu(30)
+			model: StandingsModel {}
+			delegate: Rectangle {
+				width: parent.width
+				height: pName.height
+
+				Text {
+					id: pName
+					text: playerName
+					anchors.left: parent.left
+					anchors.leftMargin: margin
+				}
+
+				Text {
+					id: pBal
+					text: playerBalance
+					anchors.left: parent.left
+					anchors.leftMargin: units.gu(20)
+				}
+
+				Text {
+					id: pStanding
+					text: playerStanding
+					anchors.right: parent.right
+					anchors.rightMargin: margin
+				}
 			}
 		}
 	}

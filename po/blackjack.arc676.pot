@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blackjack.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-24 09:48+0000\n"
+"POT-Creation-Date: 2019-05-24 12:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,34 +17,59 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/ConfirmDialog.qml:25
+#: ../qml/ConfirmDialog.qml:25 ../qml/build/tmp/ConfirmDialog.qml:25
 msgid "Are you sure you want to restart the game?"
 msgstr ""
 
-#: ../qml/ConfirmDialog.qml:29
+#: ../qml/ConfirmDialog.qml:29 ../qml/build/tmp/ConfirmDialog.qml:29
 msgid "Yes, restart"
 msgstr ""
 
-#: ../qml/ConfirmDialog.qml:38
+#: ../qml/ConfirmDialog.qml:38 ../qml/build/tmp/ConfirmDialog.qml:38
 msgid "No, keep playing"
 msgstr ""
 
-#: ../qml/SetupView.qml:39
+#: ../qml/SetupView.qml:39 ../qml/build/tmp/SetupView.qml:39
 msgid "Enable sound effects"
 msgstr ""
 
-#: ../qml/DefaultHeader.qml:20 blackjack.desktop.in.h:1
+#: ../qml/GameView.qml:137 ../qml/build/tmp/GameView.qml:136
+msgid "Hit"
+msgstr ""
+
+#: ../qml/GameView.qml:143 ../qml/build/tmp/GameView.qml:142
+msgid "Stand"
+msgstr ""
+
+#: ../qml/GameView.qml:149 ../qml/build/tmp/GameView.qml:148
+msgid "Double"
+msgstr ""
+
+#: ../qml/GameView.qml:155 ../qml/build/tmp/GameView.qml:154
+msgid "Split"
+msgstr ""
+
+#: ../qml/GameView.qml:161 ../qml/build/tmp/GameView.qml:160
+msgid "Surrender"
+msgstr ""
+
+#: ../qml/GameView.qml:167 ../qml/build/tmp/GameView.qml:166
+msgid "Next"
+msgstr ""
+
+#: ../qml/DefaultHeader.qml:20 ../qml/build/tmp/DefaultHeader.qml:20
+#: blackjack.desktop.in.h:1
 msgid "Blackjack"
 msgstr ""
 
-#: ../qml/DefaultHeader.qml:27
+#: ../qml/DefaultHeader.qml:27 ../qml/build/tmp/DefaultHeader.qml:27
 msgid "Game Settings"
 msgstr ""
 
-#: ../qml/DefaultHeader.qml:34
+#: ../qml/DefaultHeader.qml:34 ../qml/build/tmp/DefaultHeader.qml:34
 msgid "Restart game"
 msgstr ""
 
-#: ../qml/DefaultHeader.qml:40
+#: ../qml/DefaultHeader.qml:40 ../qml/build/tmp/DefaultHeader.qml:40
 msgid "About Blackjack"
 msgstr ""
