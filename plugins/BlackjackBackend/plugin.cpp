@@ -21,4 +21,5 @@ void BlackjackBackendPlugin::registerTypes(const char *uri) {
 	//@uri BlackjackBackend
 	qmlRegisterSingletonType<BlackjackBackend>(uri, 1, 0, "BlackjackBackend", [](QQmlEngine*, QJSEngine*) -> QObject* { return new BlackjackBackend; });
 	qmlRegisterType<StandingsModel>(uri, 1, 0, "StandingsModel");
+	qmlRegisterType<PlayerWrapper>(uri, 1, 0, "PlayerWrapper");
 }

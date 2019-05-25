@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blackjack.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-24 12:13+0000\n"
+"POT-Creation-Date: 2019-05-25 08:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,27 +33,27 @@ msgstr ""
 msgid "Enable sound effects"
 msgstr ""
 
-#: ../qml/GameView.qml:137 ../qml/build/tmp/GameView.qml:136
+#: ../qml/GameView.qml:105 ../qml/build/tmp/GameView.qml:136
 msgid "Hit"
 msgstr ""
 
-#: ../qml/GameView.qml:143 ../qml/build/tmp/GameView.qml:142
+#: ../qml/GameView.qml:111 ../qml/build/tmp/GameView.qml:142
 msgid "Stand"
 msgstr ""
 
-#: ../qml/GameView.qml:149 ../qml/build/tmp/GameView.qml:148
+#: ../qml/GameView.qml:117 ../qml/build/tmp/GameView.qml:148
 msgid "Double"
 msgstr ""
 
-#: ../qml/GameView.qml:155 ../qml/build/tmp/GameView.qml:154
+#: ../qml/GameView.qml:123 ../qml/build/tmp/GameView.qml:154
 msgid "Split"
 msgstr ""
 
-#: ../qml/GameView.qml:161 ../qml/build/tmp/GameView.qml:160
+#: ../qml/GameView.qml:129 ../qml/build/tmp/GameView.qml:160
 msgid "Surrender"
 msgstr ""
 
-#: ../qml/GameView.qml:167 ../qml/build/tmp/GameView.qml:166
+#: ../qml/GameView.qml:135 ../qml/build/tmp/GameView.qml:166
 msgid "Next"
 msgstr ""
 

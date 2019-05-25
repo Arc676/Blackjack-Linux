@@ -38,22 +38,24 @@ QVariant StandingsModel::data(const QModelIndex &index, int role) const {
 				return QVariant("Standing");
 		}
 	}
-	if (!leaderboard) {
+	if (!standings) {
 		return QVariant();
 	}
 	int row = index.row() - 1;
-	Player* player = leaderboard[row];
-	/*switch (role) {
+	Player* player = standings[row];
+	switch (role) {
 		case PName:
+		{
 			char* name = player_getName(player);
 			QVariant ret = QVariant(QString(name));
 			rust_freestr(name);
 			return ret;
-		case PBal:
+		}
+		case PBalance:
 			return QVariant(QString("%1").arg(player_getBalance(player)));
 		case PStanding:
 			return QVariant(QString("%1").arg(player_getStanding(player)));
-	}*/
+	}
 	return QVariant();
 }
 
@@ -65,9 +67,9 @@ QHash<int, QByteArray> StandingsModel::roleNames() const {
 	return names;
 }
 
-/*void StandingsModel::loadStandings(PlayerWrapper* wrapper) {
-	leaderboard = wrapper->getStandings();
+void StandingsModel::loadStandings(PlayerWrapper* wrapper) {
+	standings = wrapper->getStandings();
 	pCount = wrapper->getPlayerCount();
 	delete wrapper;
 	emitReset();
-}*/
+}

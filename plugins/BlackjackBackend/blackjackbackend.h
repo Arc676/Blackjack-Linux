@@ -16,13 +16,35 @@
 #define BLACKJACKBACKEND_H
 
 #include <QObject>
+#include "blackjack.h"
 
 class BlackjackBackend: public QObject {
-    Q_OBJECT
+	Q_OBJECT
+
+	Deck* deck;
+	Player** players;
+	Player* dealer;
+	int playerCount = 0, currentPlayer = 0;
 
 public:
-    BlackjackBackend();
-    ~BlackjackBackend() = default;
+	BlackjackBackend();
+	~BlackjackBackend() = default;
+
+	void newGame(int deckCount, int playerCount);
+
+	void beginTurn(int wager);
+
+	void passTurn();
+
+	void playerHit();
+
+	void playerStand();
+
+	void playerDouble();
+
+	void playerSplit();
+
+	void playerSurrender();
 };
 
 #endif

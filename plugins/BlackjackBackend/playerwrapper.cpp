@@ -12,19 +12,20 @@
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-#ifndef BLACKJACKBACKENDPLUGIN_H
-#define BLACKJACKBACKENDPLUGIN_H
+#include "playerwrapper.h"
 
-#include <QQmlExtensionPlugin>
-#include "blackjackbackend.h"
-#include "standingsmodel.h"
+void PlayerWrapper::setStandings(Player** standings) {
+	this->standings = standings;
+}
 
-class BlackjackBackendPlugin : public QQmlExtensionPlugin {
-	Q_OBJECT
-	Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface")
+Player** PlayerWrapper::getStandings() {
+	return standings;
+}
 
-public:
-	void registerTypes(const char *uri);
-};
+void PlayerWrapper::setPlayerCount(int count) {
+	playerCount = count;
+}
 
-#endif
+int PlayerWrapper::getPlayerCount() {
+	return playerCount;
+}

@@ -6,6 +6,7 @@ set(
     plugin.cpp
     blackjackbackend.cpp
     standingsmodel.cpp
+    playerwrapper.cpp
 )
 
 set(CMAKE_AUTOMOC ON)

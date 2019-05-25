@@ -17,14 +17,14 @@
 
 #include <QString>
 #include <QAbstractTableModel>
-//#include "playerwrapper.h"
+#include "playerwrapper.h"
 #include "blackjack.h"
 
 class StandingsModel: public QAbstractTableModel {
 	Q_OBJECT
 
 	int pCount = 0;
-	Player** leaderboard = nullptr;
+	Player** standings = nullptr;
 
 	enum {
 		PName = Qt::UserRole,
@@ -47,7 +47,7 @@ public:
 	 * Loads a new standings state
 	 * @param wrapper A wrapper containing the player standings
 	 */
-	//Q_INVOKABLE void loadLeaderboard(PlayerWrapper* wrapper);
+	Q_INVOKABLE void loadStandings(PlayerWrapper* wrapper);
 };
 
 #endif
